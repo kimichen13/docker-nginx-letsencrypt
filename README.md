@@ -25,7 +25,7 @@ Use [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy) and [JrCs/dock
 
 ## Authors
 
-* **Maomao Chen** - *All work* - [KimiChen](https://github.com/kimichen13)
+* **[KimiChen](https://github.com/kimichen13)** - *All work*
 
 See also the list of [contributors](https://github.com/kimichen13/docker-nginx-letsencrypt/graphs/contributors) who participated in this project.
 

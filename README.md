@@ -12,6 +12,12 @@ Clone my repository and run `docker-compose up`.
 git clone https://github.com/kimichen13/docker-nginx-letsencrypt.git
 ```
 
+## Version 2.0
+
+### Introduction
+
+I have tried many kinds of ways to reverse proxy for my websites, but it didn't work, so I will try nginx image directly.
+
 ## Version 1.0
 
 ### Introduction

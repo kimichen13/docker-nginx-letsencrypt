@@ -10,25 +10,33 @@ services:
       - "443:443"
     volumes:
       - "/var/run/docker.sock:/tmp/docker.sock:ro"
+      - "./volumes/config/:/etc/nginx/conf.d"
       - "./volumes/certs:/etc/nginx/certs:ro"
       - "./volumes/vhost.d:/etc/nginx/vhost.d:ro"
-      - "./html:/usr/share/nginx/html"
+      - "./volumes/html:/usr/share/nginx/html"
     labels:
       - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
 
   letsencrypt:
     restart: always
     image: jrcs/letsencrypt-nginx-proxy-companion
+    container_name: letsencrypt-nginx-proxy-companion
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock:ro"
       - "./volumes/certs:/etc/nginx/certs:rw"
       - "./volumes/vhost.d:/etc/nginx/vhost.d:rw"
-      - "./html:/usr/share/nginx/html"
+      - "./volumes/html:/usr/share/nginx/html"
     environment:
       NGINX_PROXY_CONTAINER: nginx_proxy
 
-  whoami:
-    image: jwilder/whoami
+  hello:
+    restart: always
+    image: hello
+    build: ./samples/hello
+    container_name: hello
     environment:
-      VIRTUAL_HOST: whoami.local
+#      VIRTUAL_HOST: 127.0.0.1
+#      VIRTUAL_PORT: 3000
+      LETSENCRYPT_HOST: 127.0.0.1
+      LETSENCRYPT_EMAIL: kimi@thinkimi.com
 

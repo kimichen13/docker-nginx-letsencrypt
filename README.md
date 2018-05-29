@@ -12,6 +12,12 @@ Clone my repository and run `docker-compose up`.
 git clone https://github.com/kimichen13/docker-nginx-letsencrypt.git
 ```
 
+## Version 2.0
+
+### Introduction
+
+I have tried many kinds of ways to reverse proxy for my websites, but it didn't work, so I will try nginx image directly.
+
 ## Version 1.0
 
 ### Introduction
@@ -25,7 +31,7 @@ Use [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy) and [JrCs/dock
 
 ## Authors
 
-* **Maomao Chen** - *All work* - [KimiChen](https://github.com/kimichen13)
+* **[KimiChen](https://github.com/kimichen13)** - *All work*
 
 See also the list of [contributors](https://github.com/kimichen13/docker-nginx-letsencrypt/graphs/contributors) who participated in this project.
 

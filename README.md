@@ -2,6 +2,11 @@
 
 Combine docker, nginx, letsencrypt.
 
+## Conclusion
+
+Since `nginx-proxy` do not support path proxy, so it's difficult to use this ways to implement my purpose.
+I decide to use seperated container without letsencrypt to build my applications.
+
 ## Getting Started
 
 ### Installing

@@ -33,25 +33,25 @@ Combine docker, nginx, letsencrypt.
 
 *** Introduction
 
-    Use [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy) and [JrCs/docker-letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion) to start nginx service and run ~curl -H "Host: whoami.local" localhost~ to get the ~I'm dbc4e7f57ec0~ from the http request.
+    Use [[https://github.com/jwilder/nginx-proxy][jwilder/nginx-proxy]] and [[https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion][JrCs/docker-letsencrypt-nginx-proxy-companion]] to start nginx service and run ~curl -H "Host: whoami.local" localhost~ to get the ~I'm dbc4e7f57ec0~ from the http request.
 
 *** Questions & Solutions
 
 **** How to share volumes or how to configure volumes insteads of ~volumes_from~ in version 2 of docker-compose? Since new to docker, I just copy volumes from ~nginx~ to ~letsencrypt~. It works but not perfect.
-**** When I use Chrome as http client rather than curl or postman, I cannot get the correct response but a 503 error. Unless I add ~Host: whoami.local~ to the head. I don't know how to deal with it:sob:.
+**** When I use Chrome as http client rather than curl or postman, I cannot get the correct response but a 503 error. Unless I add ~Host: whoami.local~ to the head. I don't know how to deal with it.:sob:
+     
+*** Authors
 
-## Authors
+**** * [[https://github.com/kimichen13][KimiChen]]* - /All work/
 
-**** *[KimiChen](https://github.com/kimichen13)* - /All work/
-
-     See also the list of [contributors](https://github.com/kimichen13/docker-nginx-letsencrypt/graphs/contributors) who participated in this project.
+     See also the list of [[https://github.com/kimichen13/docker-nginx-letsencrypt/graphs/contributors][contributors]] who participated in this project.
 
 ** License
 
-   This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+   This project is licensed under the MIT License - see the [[LICENSE][LICENSE]] file for details
 
 ** References
 
-**** [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy)
-**** [JrCs/docker-letsencrypt-nginx-proxy-companion](https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion)
-**** [gilyes/docker-nginx-letsencrypt-sample](https://github.com/gilyes/docker-nginx-letsencrypt-sample)
+**** [[https://github.com/jwilder/nginx-proxy][jwilder/nginx-proxy]]
+**** [[https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion][JrCs/docker-letsencrypt-nginx-proxy-companion]]
+**** [[https://github.com/gilyes/docker-nginx-letsencrypt-sample][gilyes/docker-nginx-letsencrypt-sample]]

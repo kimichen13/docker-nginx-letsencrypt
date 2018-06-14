@@ -35,8 +35,8 @@ services:
     build: ./samples/hello
     container_name: hello
     environment:
-#      VIRTUAL_HOST: 127.0.0.1
-#      VIRTUAL_PORT: 3000
-      LETSENCRYPT_HOST: 127.0.0.1
+      VIRTUAL_HOST: hello.thinkimi.com
+      VIRTUAL_PORT: 3000
+      LETSENCRYPT_HOST: hello.thinkimi.com
       LETSENCRYPT_EMAIL: kimi@thinkimi.com
 

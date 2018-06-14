@@ -23,6 +23,17 @@ Combine docker, nginx, letsencrypt.
 
     Because of godaddy can configure secondary domain, so this idea could be implement.
 
+*** Usage
+
+    + Clone the repository.
+
+    #+BEGIN_SRC shell
+    git clone https://github.com/kimichen13/docker-nginx-letsencrypt.git
+    #+END_SRC
+
+    + Run ~docker-compose up -d~.
+    + Visit [[https://hello.thinkimi.com/][Hello]].
+
 ** Version 2.0
 
 *** Introduction

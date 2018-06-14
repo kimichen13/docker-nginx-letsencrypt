@@ -41,3 +41,7 @@ services:
       LETSENCRYPT_HOST: hello.thinkimi.com
       LETSENCRYPT_EMAIL: kimi@thinkimi.com
 
+networks:
+  default:
+    external:
+      name: thinkimi-networks

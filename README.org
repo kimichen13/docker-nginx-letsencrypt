@@ -31,6 +31,7 @@ Combine docker, nginx, letsencrypt.
     git clone https://github.com/kimichen13/docker-nginx-letsencrypt.git
     #+END_SRC
 
+    + Create networks ~docker network create thinkimi-networks~.
     + Run ~docker-compose up -d~.
     + Visit [[https://hello.thinkimi.com/][Hello]].
 

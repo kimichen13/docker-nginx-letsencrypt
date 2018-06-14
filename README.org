@@ -37,14 +37,13 @@ Combine docker, nginx, letsencrypt.
 
 *** Questions & Solutions
 
-**** How to share volumes or how to configure volumes insteads of ~volumes_from~ in version 2 of docker-compose? Since new to docker, I just copy volumes from ~nginx~ to ~letsencrypt~. It works but not perfect.
-**** When I use Chrome as http client rather than curl or postman, I cannot get the correct response but a 503 error. Unless I add ~Host: whoami.local~ to the head. I don't know how to deal with it.:sob:
+    - How to share volumes or how to configure volumes insteads of ~volumes_from~ in version 2 of docker-compose? Since new to docker, I just copy volumes from ~nginx~ to ~letsencrypt~. It works but not perfect.
+    - When I use Chrome as http client rather than curl or postman, I cannot get the correct response but a 503 error. Unless I add ~Host: whoami.local~ to the head. I don't know how to deal with it.:sob:
      
 *** Authors
 
-**** * [[https://github.com/kimichen13][KimiChen]]* - /All work/
-
-     See also the list of [[https://github.com/kimichen13/docker-nginx-letsencrypt/graphs/contributors][contributors]] who participated in this project.
+    - *[[https://github.com/kimichen13][KimiChen]]* - /All work/
+    - See also the list of [[https://github.com/kimichen13/docker-nginx-letsencrypt/graphs/contributors][contributors]] who participated in this project.
 
 ** License
 
@@ -52,6 +51,6 @@ Combine docker, nginx, letsencrypt.
 
 ** References
 
-**** [[https://github.com/jwilder/nginx-proxy][jwilder/nginx-proxy]]
-**** [[https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion][JrCs/docker-letsencrypt-nginx-proxy-companion]]
-**** [[https://github.com/gilyes/docker-nginx-letsencrypt-sample][gilyes/docker-nginx-letsencrypt-sample]]
+   - [[https://github.com/jwilder/nginx-proxy][jwilder/nginx-proxy]]
+   - [[https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion][JrCs/docker-letsencrypt-nginx-proxy-companion]]
+   - [[https://github.com/gilyes/docker-nginx-letsencrypt-sample][gilyes/docker-nginx-letsencrypt-sample]]

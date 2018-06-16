@@ -17,6 +17,9 @@ services:
       - "./volumes/logs:/var/log/nginx"
     labels:
       - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
+    environment:
+      LETSENCRYPT_HOST: thinkimi.com
+      LETSENCRYPT_EMAIL: kimi@thinkimi.com
 
   letsencrypt:
     restart: always

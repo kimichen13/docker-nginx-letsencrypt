@@ -14,6 +14,7 @@ services:
       - "./volumes/certs:/etc/nginx/certs:ro"
       - "./volumes/vhost.d:/etc/nginx/vhost.d:ro"
       - "./volumes/html:/usr/share/nginx/html"
+      - "./volumes/logs:/var/log/nginx"
     labels:
       - "com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy"
 
@@ -40,3 +41,7 @@ services:
       LETSENCRYPT_HOST: hello.thinkimi.com
       LETSENCRYPT_EMAIL: kimi@thinkimi.com
 
+networks:
+  default:
+    external:
+      name: thinkimi-networks

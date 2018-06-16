@@ -4,7 +4,7 @@ var cors = require('cors');
 var app = express();
 app.use(cors());
 
-app.get('/hello', function (req, res) {
+app.get('/', function (req, res) {
   res.send('Welcome to ThinKimi!!');
 });
 

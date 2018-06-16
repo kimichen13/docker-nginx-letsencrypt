@@ -1,0 +1,68 @@
+* docker-nginx-letsencrypt
+
+Combine docker, nginx, letsencrypt.
+
+** Conclusion
+
+   Since ~nginx-proxy~ do not support path proxy, so it's difficult to use this way to implement my purpose.
+   I decide to use seperated container without letsencrypt to build my applications.
+
+** Getting Started
+
+*** Installing
+
+    Clone my repository and run ~docker-compose up~.
+    
+    #+BEGIN_SRC shell
+     git clone https://github.com/kimichen13/docker-nginx-letsencrypt.git
+    #+END_SRC
+
+** Version 3.0
+
+*** Introduction
+
+    Because of godaddy can configure secondary domain, so this idea could be implement.
+
+*** Usage
+
+    + Clone the repository.
+
+    #+BEGIN_SRC shell
+    git clone https://github.com/kimichen13/docker-nginx-letsencrypt.git
+    #+END_SRC
+
+    + Create networks ~docker network create thinkimi-networks~.
+    + Run ~docker-compose up -d~.
+    + Visit [[https://hello.thinkimi.com/][Hello]].
+
+** Version 2.0
+
+*** Introduction
+
+    I have tried many kinds of ways to reverse proxy for my websites, but it didn't work, so I will try nginx image directly.
+
+** Version 1.0
+
+*** Introduction
+
+    Use [[https://github.com/jwilder/nginx-proxy][jwilder/nginx-proxy]] and [[https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion][JrCs/docker-letsencrypt-nginx-proxy-companion]] to start nginx service and run ~curl -H "Host: whoami.local" localhost~ to get the ~I'm dbc4e7f57ec0~ from the http request.
+
+*** Questions & Solutions
+
+    - How to share volumes or how to configure volumes insteads of ~volumes_from~ in version 2 of docker-compose? Since new to docker, I just copy volumes from ~nginx~ to ~letsencrypt~. It works but not perfect.
+    - When I use Chrome as http client rather than curl or postman, I cannot get the correct response but a 503 error. Unless I add ~Host: whoami.local~ to the head. I don't know how to deal with it.:sob:
+     
+*** Authors
+
+    - *[[https://github.com/kimichen13][KimiChen]]* - /All work/
+    - See also the list of [[https://github.com/kimichen13/docker-nginx-letsencrypt/graphs/contributors][contributors]] who participated in this project.
+
+** License
+
+   This project is licensed under the MIT License - see the [[LICENSE][LICENSE]] file for details
+
+** References
+
+   - [[https://github.com/jwilder/nginx-proxy][jwilder/nginx-proxy]]
+   - [[https://github.com/JrCs/docker-letsencrypt-nginx-proxy-companion][JrCs/docker-letsencrypt-nginx-proxy-companion]]
+   - [[https://github.com/gilyes/docker-nginx-letsencrypt-sample][gilyes/docker-nginx-letsencrypt-sample]]
